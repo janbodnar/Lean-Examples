@@ -43,7 +43,7 @@ def main : IO Unit := do
 
 ## Lambdas 
 
-`(·.1)` is syntax sugar for `fun x => x.1`.  
+`(·*1)` is syntax sugar for `fun e => e*1`.  
 The `λ` is written with `\lambda`.  
 
 ```lean
