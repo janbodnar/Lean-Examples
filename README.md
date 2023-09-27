@@ -55,6 +55,8 @@ def main: IO Unit :=
 
 ## String interpolation
 
+String interpolation is performed with `s!""`. The definitions are expanded inside `{}`.  
+
 ```lean
 def main: IO Unit :=
   let name := "John Doe"
