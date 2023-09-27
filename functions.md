@@ -31,6 +31,25 @@ def main: IO Unit := do
   IO.println (Nat.succ (Nat.succ Nat.zero))
 ```
 
+
+## Parameters 
+
+The parameters can be defined in two ways: 
+
+```lean
+def add (x y : Nat) :=
+  x + y
+
+def add' (x : Nat) (y : Nat) :=
+  x + y
+
+def main: IO Unit := do 
+
+  IO.println (add 2 3) 
+  IO.println (add' 12 13)
+```
+
+
 ## Function expression 
 
 ```lean
