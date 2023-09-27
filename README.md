@@ -1,6 +1,18 @@
 # Lean-Examples
 Lean 4 code examples
 
+## Random value
+
+To read from an IO, Lean uses the `<-` operator.  
+
+```lean
+def main: IO Unit := do
+
+  let r <- IO.rand 0 99
+  IO.println r
+```
+
+## map/filter
 
 ```lean
 def fn (xs : List Nat) :=
