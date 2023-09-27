@@ -2,6 +2,8 @@
 Lean 4 code examples
 
 
+`lean --run Hello.lean` - run a Lean program
+
 ## String interpolation
 
 ```lean
