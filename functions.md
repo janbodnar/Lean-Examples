@@ -71,9 +71,9 @@ def main: IO Unit := do
 
 ## Composition
 
-The function compose takes three types, `α`, `β`, and `γ`, and two functions, 
-`g : β → γ` and `f : α → β`, a value `x : α`, and returns `g (f x)`, the composition 
-of `g` and `f`. We say compose is polymorphic over types `α`, `β`, and `γ`.
+The function compose takes three types, `α`, `β`, and `γ`, and two functions,  
+`g : β → γ` and `f : α → β`, a value `x : α`, and returns `g (f x)`, the composition  
+of `g` and `f`. We say compose is polymorphic over types `α`, `β`, and `γ`.  
 
 ```lean
 def compose (α β γ : Type) (g : β → γ) (f : α → β) (x : α) : γ :=
