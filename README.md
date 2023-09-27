@@ -4,6 +4,11 @@ Lean 4 code examples
 
 `lean --run Hello.lean` - run a Lean program
 
+## New project
+
+`lake init hello`
+`lake new hello`
+
 
 ## Lean version/origin
 
