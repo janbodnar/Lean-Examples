@@ -4,6 +4,23 @@ Lean 4 code examples
 
 `lean --run Hello.lean` - run a Lean program
 
+
+## Lean version/origin
+
+The `Lean.versionString` and `Lean.origin` definitions store the version and  
+origin of Lean.  
+
+```lean
+def main: IO Unit := do
+
+  IO.println Lean.versionString
+  IO.println Lean.origin
+```
+
+## Function calls 
+
+Functions are called with `()` notation. 
+
 ```lean
 def main: IO Unit := do 
 
