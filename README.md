@@ -151,6 +151,16 @@ def main : IO Unit := do
     IO.println e
 ```
 
+## Ranges 
+
+```lean
+def main: IO Unit := 
+
+  for e in [1:20:3] do 
+    IO.println e
+```
+
+
 ## Function definition
 
 A function is defined with the `def` keyword.  There is no `return` keyword.  
