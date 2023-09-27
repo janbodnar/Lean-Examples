@@ -9,7 +9,7 @@ Lean 4 code examples
 We can use the `++` operator or the `String.append` function.  
 
 ```lean
-def main: IO Unit := do
+def main: IO Unit :=
 
   let s1 := "an old"
   let s2 := "falcon"
@@ -19,7 +19,7 @@ def main: IO Unit := do
 ```
 
 ```lean
-def main: IO Unit := do
+def main: IO Unit :=
 
   let s1 := "an old"
   let s2 := "falcon"
