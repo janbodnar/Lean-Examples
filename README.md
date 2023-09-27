@@ -17,6 +17,24 @@ def main: IO Unit := do
   IO.println Lean.origin
 ```
 
+## Not equal 
+
+Lean uses the classic `!=` operator or the `≠`.  
+The `≠` is inserted with `\neq` or `\ne` or `\eqn` or `\=n`.  
+
+```lean
+def main: IO Unit := do
+
+  let n := 1
+  let m := 2
+
+  if m != n then
+    IO.println "m is not equal to n"
+
+  if m ≠ n then
+    IO.println "m is not equal to n"
+```
+
 ## Function calls 
 
 Functions are called with `()` notation. 
