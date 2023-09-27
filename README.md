@@ -59,6 +59,28 @@ def main : IO Unit := do
   IO.println (times2 <| add1 <| 55)
 ```
 
+## map/filter
+
+```lean
+def fn (xs : List Nat) :=
+  List.filter (· % 2 == 0) (List.map (· * 3) (List.map (· + 1) xs))
+
+def main: IO Unit := do
+
+  let res := fn [1, 2, 3, 4]
+  IO.println res
+
+  let res := fn <| [1, 2, 3, 4]
+  IO.println res
+
+  let res := [1, 2, 3, 4] |> fn 
+  IO.println res
+
+  -- Haskell version
+  let res2 := fn $ [2, 5, 6, 9, 10]
+  IO.println res2
+```
+
 ## Lambdas 
 
 `(·*1)` is syntax sugar for `fun e => e*1`.  
@@ -79,28 +101,42 @@ def main : IO Unit := do
   IO.println res
 ```
 
-## map/filter
-
 ```lean
-def fn (xs : List Nat) :=
-  List.filter (· % 2 == 0) (List.map (· * 3) (List.map (· + 1) xs))
 
 
-def main: IO Unit := do
+def double (n : Nat) : Nat := n + n
 
-  let res := fn [1, 2, 3, 4]
+def mand (a b : Bool) : Bool :=
+  match a with
+  | true  => b
+  | false => false
+
+
+def main : IO Unit := do
+
+  IO.println (mand true true)
+  IO.println (mand true false)
+  IO.println (mand false true)
+  IO.println (mand false false)
+
+  IO.println (double 5)
+
+  let res := List.map (λ x => toString x) [1, 2, 3]
   IO.println res
 
-  let res := fn <| [1, 2, 3, 4]
-  IO.println res
-
-  let res := [1, 2, 3, 4] |> fn 
-  IO.println res
-
-  -- Haskell version
-  let res2 := fn $ [2, 5, 6, 9, 10]
+  let res2 := [1, 2, 3, 4, 5, 6, 7].map (λ x => x + 1)
   IO.println res2
+
+  for e in List.range 10 do
+    IO.println e
+
+  let data := (List.range 10).map (λ x => x * x)
+  IO.println data
 ```
+
+
+
+
 
 ## Match pattern 
 
