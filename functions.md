@@ -69,6 +69,24 @@ def main: IO Unit := do
   IO.println (double2 12)
 ```
 
+## Composition
+
+The function compose takes three types, `α`, `β`, and `γ`, and two functions, 
+`g : β → γ` and `f : α → β`, a value `x : α`, and returns `g (f x)`, the composition 
+of `g` and `f`. We say compose is polymorphic over types `α`, `β`, and `γ`.
+
+```lean
+def compose (α β γ : Type) (g : β → γ) (f : α → β) (x : α) : γ :=
+  g (f x)
+
+def double (x : Nat) := 2 * x
+def triple (x : Nat) := 3 * x
+
+def main: IO Unit :=
+
+  IO.println (compose Nat Nat Nat double triple 10)
+```
+
 
 ## Generic functions
 
