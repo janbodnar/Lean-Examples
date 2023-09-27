@@ -4,6 +4,30 @@ Lean 4 code examples
 
 `lean --run Hello.lean` - run a Lean program
 
+## String concatenation 
+
+We can use the `++` operator or the `String.append` function.  
+
+```lean
+def main: IO Unit := do
+
+  let s1 := "an old"
+  let s2 := "falcon"
+
+  let msg := s1 ++ " " ++ s2
+  IO.println msg
+```
+
+```lean
+def main: IO Unit := do
+
+  let s1 := "an old"
+  let s2 := "falcon"
+
+  let msg := String.append (String.append s1 " ") s2
+  IO.println msg
+```
+
 ## String interpolation
 
 ```lean
