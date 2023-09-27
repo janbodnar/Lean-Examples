@@ -4,6 +4,14 @@ Lean 4 code examples
 
 `lean --run Hello.lean` - run a Lean program
 
+```lean
+def main: IO Unit := do 
+
+  IO.println Nat.zero
+  IO.println (Nat.succ Nat.zero)
+  IO.println (Nat.succ (Nat.succ Nat.zero))
+```
+
 ## String concatenation 
 
 We can use the `++` operator or the `String.append` function.  
