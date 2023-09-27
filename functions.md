@@ -31,6 +31,19 @@ def main: IO Unit := do
   IO.println (Nat.succ (Nat.succ Nat.zero))
 ```
 
+## Function expression 
+
+```lean
+def double : Nat → Nat := fun
+  | 0 => 0
+  | k + 1 => double k + 2
+
+def main: IO Unit := 
+
+  let r := double 10
+  IO.println r
+```
+
 
 ## Generic functions
 
