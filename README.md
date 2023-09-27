@@ -39,6 +39,25 @@ def main: IO Unit :=
   IO.println msg
 ```
 
+## Conditions 
+
+Lean uses `if/else/else if/then` to create conditions.  
+
+```lean
+def main: IO Unit := do 
+
+  -- let vals: (List Nat) := (List.range 5).map(λ e => e - 10)
+  let vals := [-3, -2, 0, -1, 2, 1, 3]
+  
+  for e in vals do
+    if e < 0 then
+      IO.println s!"{e} is negative"
+    else if e > 0 then
+      IO.println s!"{e} is positive"
+    else
+      IO.println s!"{e} zero"
+```
+
 ## Random value
 
 To read from an IO, Lean uses the `<-` operator.  
