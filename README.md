@@ -6,8 +6,8 @@ Lean 4 code examples
 
 ## New project
 
-`lake init hello`
-`lake new hello`
+- `lake init hello`
+- `lake new hello`
 
 
 ## Lean version/origin
