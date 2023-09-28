@@ -12,6 +12,6 @@ def main: IO Unit := do
   let word2 := "вселенная"
   IO.println (String.length word2)
 
-  let word3 := "नमस्ते"
+  let word3 := "नमस्ते" -- cannot handle
   IO.println (String.length word3)
 ```
