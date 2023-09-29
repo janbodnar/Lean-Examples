@@ -9,9 +9,10 @@ def main: IO Unit :=
 
   let msg := s!"{name} is {age} years old"
   IO.println msg
+```
 
 ## String length
-```
+
 
 ```lean
 def main: IO Unit := do
