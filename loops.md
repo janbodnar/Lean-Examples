@@ -27,4 +27,23 @@ def main : IO Unit := do
 
   let n := words.length
   for x in words, y in [1:n] do
-    IO.println (x, y)  
+    IO.println (x, y)
+
+## While loop
+
+```lean
+def main: IO Unit := do
+
+  let vals := [1, 2, 3, 4, 5]
+
+  let n := vals.length
+  let mut i := 0
+  let mut sum := 0
+
+  while i < n do 
+
+    sum := sum + vals[i]!
+    i := i + 1
+
+  IO.println sum
+```
