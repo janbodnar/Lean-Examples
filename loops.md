@@ -28,6 +28,7 @@ def main : IO Unit := do
   let n := words.length
   for x in words, y in [1:n] do
     IO.println (x, y)
+```
 
 ## While loop
 
