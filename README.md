@@ -9,6 +9,15 @@ Lean 4 code examples
 - `lake init hello`
 - `lake new hello`
 
+## Simple program 
+
+The `println!` is a macro.  
+
+```lean
+def main: IO Unit :=
+
+  println! "Hello there!"
+```
 
 ## Lean version/origin
 
