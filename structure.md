@@ -28,6 +28,7 @@ def main : IO Unit := do
 
 ## Constructor
 
+Constructors gather the data to be stored in the newly-allocated structure.  
 The `mk` is the default constructor.  
 
 ```lean
