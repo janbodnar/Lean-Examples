@@ -25,7 +25,7 @@ def u := User.mk "John Doe" "gardener"
 def main: IO Unit := println! u
 ```
 
-## The toString function
+## The ToString function
 
 ```lean
 structure User where
