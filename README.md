@@ -27,8 +27,18 @@ origin of Lean.
 ```lean
 def main: IO Unit := do
 
-  IO.println Lean.versionString
-  IO.println Lean.origin
+  println! Lean.versionString
+  println! Lean.origin
+```
+
+## Nat lower bound is 0
+
+The `1 - 3` evaluates to `0` for natural numbers.  
+
+```lean
+#eval 1 - 3
+#eval 1 - (3 : Int)
+#eval (1 - 3 : Int)
 ```
 
 ## Mutable variables 
