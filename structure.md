@@ -7,24 +7,6 @@ The typeclass instance is where the operations described in the typeclass declar
 are implemented for a particular type. An instance is a unique relationship  
 between a type and a typeclass.
 
-## Constructor
-
-The `mk` is the default constructor.  
-
-```lean
-structure User where
-  name : String  
-  occupation : String
-
-instance: ToString User where
-  toString p := p.name ++ ": " ++ p.occupation
-
-def u := User.mk "John Doe" "gardener"
-
-
-def main: IO Unit := println! u
-```
-
 ## The ToString function
 
 ```lean
@@ -42,6 +24,24 @@ def user : User where
 
 def main : IO Unit := do
   println! user
+```
+
+## Constructor
+
+The `mk` is the default constructor.  
+
+```lean
+structure User where
+  name : String  
+  occupation : String
+
+instance: ToString User where
+  toString p := p.name ++ ": " ++ p.occupation
+
+def u := User.mk "John Doe" "gardener"
+
+
+def main: IO Unit := println! u
 ```
 
 ## Constructor override 
