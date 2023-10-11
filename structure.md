@@ -51,6 +51,8 @@ def main: IO Unit := do
 
 ## Generic structure
 
+The expression `p.add q` is a shorthand for `Point.add p q`  
+
 ```lean
 structure Point (α : Type u) where
   x : α
