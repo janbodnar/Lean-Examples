@@ -1,5 +1,6 @@
 # Structures
 
+The `mk` is the default constructor.  
 
 ## Definition
 
