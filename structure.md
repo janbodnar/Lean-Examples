@@ -54,23 +54,33 @@ def main: IO Unit := do
 ## Definition
 
 ```lean
-structure Person where
+structure User where
   name : String
   age  : Nat
-deriving Repr
 
-instance : ToString Person where
+instance : ToString User where
   toString p := p.name ++ "@" ++ toString p.age
 
 
 def main : IO Unit := do
 
-  let p := { name := "Leo", age := 44 : Person }
+  let p := { name := "Leo", age := 44 : User }
 
   IO.println p.name
   IO.println p.age
-
   IO.println p
+
+  let p: User := { name := "Peter", age := 23 }
+  IO.println p
+
+  let p: User := { 
+    name := "Lucia"
+    age := 29
+  }
+  
+  IO.println p
+
+  p |> IO.println
 ```
 
 ## Functions
