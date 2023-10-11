@@ -1,6 +1,27 @@
 # Structures
 
 
+## Definition
+
+```lean
+structure Person where
+  name : String
+  age  : Nat
+deriving Repr
+
+instance : ToString Person where
+  toString p := p.name ++ "@" ++ toString p.age
+
+
+def main : IO Unit := do
+
+  let p := { name := "Leo", age := 44 : Person }
+
+  IO.println p.name
+  IO.println p.age
+
+  IO.println p
+```
 
 ## Copy with
 
