@@ -1,6 +1,11 @@
 # Structures
 
+Structure is a special case of inductive datatype. It has only one constructor  
+and is not recursive.
 
+The typeclass instance is where the operations described in the typeclass declaration  
+are implemented for a particular type. An instance is a unique relationship  
+between a type and a typeclass.
 
 ## Constructor
 
@@ -19,6 +24,9 @@ def u := User.mk "John Doe" "gardener"
 
 def main: IO Unit := println! u
 ```
+
+
+
 
 ## Definition
 
