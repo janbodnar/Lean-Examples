@@ -90,6 +90,25 @@ def main: IO Unit := do
   IO.println msg
 ```
 
+## The by keyword
+
+The `by` keyword runs a tactic. It can be used both in theorems and normal programs.  
+We create a safe type for the divide operation by ensuring that the divisor is not equal to zero.  
+
+```lean
+notation "ℕ" => Nat
+
+example : 2 + 13 ≠ 5 := by decide
+
+def divide (x : ℕ) (y : { n : ℕ // n ≠ 0 }) : ℕ := x / y
+#check divide 4 ⟨3, by decide⟩
+
+def main : IO Unit := do
+
+  let r := divide 4 ⟨2, by decide⟩
+  println! r
+```
+
 
 
 ## String concatenation 
