@@ -1,8 +1,6 @@
 # Lean-Examples
 Lean 4 code examples
 
-There are two modes in Lean to prove theorems: the *tactic mode* and the *term mode*.  
-
 `lean --run Hello.lean` - run a Lean program
 
 ## New project
