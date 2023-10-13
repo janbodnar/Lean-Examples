@@ -3,7 +3,9 @@
 
 There are two modes in Lean to prove theorems: the *tactic mode* and the *term mode*.
 We can switch into *tactic mode* at any point using the keyword `by`. 
-  
+
+`example` creates anonymous (unnamed) theorems.
+
 The basic tactics either run an inference rule forwards or backwards (for example,  convert hypotheses `A` and `B` into `A∧B` or convert goal `A∧B` into two goals `A`  
 and `B` with same hypotheses), apply a lemma (~ function application), split up a  
 lemma about some inductive type into a case for each constructor, and so on. 
