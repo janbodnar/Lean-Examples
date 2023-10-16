@@ -30,6 +30,14 @@ def main : IO Unit := do
     IO.println e
 ```
 
+## List to array
+
+```lean
+def vals := Array.mk [1, 2, 3, 4, 5]
+
+#eval vals
+```
+
 ## Modification
 
 ```lean
