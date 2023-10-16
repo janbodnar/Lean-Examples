@@ -30,6 +30,24 @@ def main: IO Unit := do
   println! Lean.origin
 ```
 
+## Main arguments
+
+Run the program with `lean -r args.lean 1 2 3 4 5`.  
+
+```lean
+def main(_args: List String): IO UInt32 := do
+
+    _args.forM λ e => IO.println e
+
+    println! "----------------"
+
+    for e in _args do
+      println! e
+
+    return 0
+```
+
+
 ## Nat lower bound is 0
 
 The `1 - 3` evaluates to `0` for natural numbers.  
