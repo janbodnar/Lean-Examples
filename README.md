@@ -30,7 +30,7 @@ def main: IO Unit := do
   println! Lean.origin
 ```
 
-## Main arguments
+## main arguments
 
 Run the program with `lean -r args.lean 1 2 3 4 5`.  
 
