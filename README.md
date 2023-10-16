@@ -32,7 +32,7 @@ def main: IO Unit := do
 
 ## main arguments
 
-Run the program with `lean -r args.lean 1 2 3 4 5`.  
+Run the program with `lean -r args.lean 1 2 3`  
 
 ```lean
 def main(_args: List String): IO UInt32 := do
