@@ -44,6 +44,13 @@ def nums := Array.mk [1, 2, 3, 4, 5]
 #eval nums.forM IO.println
 ```
 
+## all
+
+```lean
+def nums := Array.mk [1, 2, 3, 4, 5]
+#eval nums.all (. > 0)
+```
+
 ## Modification
 
 ```lean
