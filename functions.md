@@ -31,6 +31,21 @@ def main: IO Unit := do
   IO.println (Nat.succ (Nat.succ Nat.zero))
 ```
 
+## Lambda shorthand
+
+`(·+·)` is a shorthand for `(λ x y => x + y)`.
+
+```lean
+def sum (xs : List Nat) :=
+  xs.foldl (init := 0) (·+·)
+
+def sum' (xs : List Nat) :=
+  xs.foldl (init := 0) (λ x y => x + y)
+
+#eval sum [1, 2, 3, 4]
+#eval sum' [1, 2, 3, 4]
+```
+
 
 ## Parameters 
 
