@@ -47,7 +47,7 @@ def sum' (xs : List Nat) :=
 ```
 ## The <$> operator 
 
-The `<$>` originates from Haskell operator; it applies the given function to  
+The `<$>` operator originates from Haskell; it applies the given function to  
 each element of the list.  
 
 ```lean
