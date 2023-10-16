@@ -34,8 +34,14 @@ def main : IO Unit := do
 
 ```lean
 def vals := Array.mk [1, 2, 3, 4, 5]
-
 #eval vals
+```
+
+## forM
+
+```lean
+def nums := Array.mk [1, 2, 3, 4, 5]
+#eval nums.forM IO.println
 ```
 
 ## Modification
