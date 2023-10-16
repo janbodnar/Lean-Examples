@@ -45,7 +45,18 @@ def sum' (xs : List Nat) :=
 #eval sum [1, 2, 3, 4]
 #eval sum' [1, 2, 3, 4]
 ```
+## The <$> operator 
 
+The `<$>` originates from Haskell operator; it applies the given function to  
+each element of the list.  
+
+```lean
+def vals := (. * 2) <$> [1,2,3]
+def vals' := List.map (λ e => e * 2) [1,2,3]
+
+#eval vals
+#eval vals'
+```
 
 ## Parameters 
 
